@@ -15,6 +15,7 @@
 		565088451CA9673700D11F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 565088441CA9673700D11F29 /* Assets.xcassets */; };
 		565088481CA9673700D11F29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565088461CA9673700D11F29 /* LaunchScreen.storyboard */; };
 		565088551CA974D200D11F29 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565088541CA974D200D11F29 /* CoreLocation.framework */; };
+		56933E4C1CAC0611005A2E9A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56933E4B1CAC0611005A2E9A /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		565088471CA9673700D11F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		565088491CA9673700D11F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		565088541CA974D200D11F29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		56933E4A1CAC0611005A2E9A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		56933E4B1CAC0611005A2E9A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 			children = (
 				5650883B1CA9673700D11F29 /* ViewController.h */,
 				5650883C1CA9673700D11F29 /* ViewController.m */,
+				56933E4A1CAC0611005A2E9A /* LoginViewController.h */,
+				56933E4B1CAC0611005A2E9A /* LoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				5650883A1CA9673700D11F29 /* AppDelegate.m in Sources */,
 				565088371CA9673700D11F29 /* main.m in Sources */,
 				565088431CA9673700D11F29 /* ToDo.xcdatamodeld in Sources */,
+				56933E4C1CAC0611005A2E9A /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +354,7 @@
 				5650884E1CA9673700D11F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
