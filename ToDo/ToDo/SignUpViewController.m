@@ -9,4 +9,12 @@
 #import "SignUpViewController.h"
 
 @implementation SignUpViewController
+
+
+#pragma mark - Actions
+
+- (IBAction)SignUpBack:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
