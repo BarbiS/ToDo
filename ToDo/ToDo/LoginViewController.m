@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 
 #define kConstant 50.0
+#define ZERO_VALUE 0.0
 
 @interface LoginViewController() <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *usernameImageView;
@@ -17,7 +18,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIView *logoView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
+@property (weak, nonatomic) IBOutlet UIView *maskLogoView;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UIView *footerView;
 @end
+
 
 @implementation LoginViewController
 
@@ -46,6 +52,7 @@
 }
 
 - (IBAction)signInButtonTapped:(UIButton *)sender {
+    [self.activityIndicatorView startAnimating];
 }
 
 - (IBAction)signUpButtonTapped:(UIButton *)sender {
@@ -61,12 +68,17 @@
     [self configureTextField:self.passwordTextField];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self prepareForAnimations];
+    [self.activityIndicatorView stopAnimating];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [UIView animateWithDuration:3.0 animations:^{
-        self.logoView.alpha = 0.0;
-    }];
+    [self animate];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -105,5 +117,49 @@
                      }
                      completion:nil];
 }
+
+- (void)prepareForAnimations{
+    // Footer View
+    CGRect footerViewFrame = self.footerView.frame;
+    footerViewFrame.origin.y = self.view.frame.size.height;
+    self.footerView.frame = footerViewFrame;
+    
+    // Sign in Button
+    CGRect submitButtonFrame = self.submitButton.frame;
+    submitButtonFrame.origin.x = self.submitButton.frame.size.width;
+    self.submitButton.frame = submitButtonFrame;
+    
+    
+    // Mask Logo view
+    self.maskLogoView.layer.cornerRadius = self.maskLogoView.frame.size.width/2;
+}
+
+
+- (void)animate {
+    [UIView animateWithDuration:0.4 animations:^{
+        CGRect frame = self.footerView.frame;
+        frame.origin.y = 625;
+        self.footerView.frame = frame;
+    }];
+    
+    [UIView animateWithDuration:0.4
+                          delay:0.2
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         CGRect submitButtonFrame = self.submitButton.frame;
+                         submitButtonFrame.origin.x = ZERO_VALUE;
+                         self.submitButton.frame = submitButtonFrame;
+                     }
+                     completion:NULL];
+    
+    [UIView animateWithDuration:0.4
+                          delay:0.2
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         self.maskLogoView.alpha = ZERO_VALUE;
+                     }
+                     completion:NULL];
+}
+
 
 @end
