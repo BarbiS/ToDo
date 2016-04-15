@@ -1,17 +1,6 @@
 {
   "images" : [
     {
-      "resizing" : {
-        "mode" : "3-part-horizontal",
-        "center" : {
-          "mode" : "tile",
-          "width" : 1
-        },
-        "cap-insets" : {
-          "right" : 23,
-          "left" : 26
-        }
-      },
       "idiom" : "universal",
       "filename" : "badge.pdf",
       "scale" : "1x"
