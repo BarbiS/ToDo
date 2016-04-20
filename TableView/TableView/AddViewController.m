@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *imageURLTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
-@property (strong, nonatomic) DataManager *dataManager;
 @end
 
 @implementation AddViewController
@@ -41,8 +40,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.dataManager = [DataManager sharedInstance];
     
     if (self.designer) {
         self.nameTextField.text = self.designer.name;

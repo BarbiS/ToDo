@@ -12,18 +12,9 @@
 
 @interface GalleryViewController() <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) DataManager *dataManager;
 @end
 
 @implementation GalleryViewController
-
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.dataManager = [DataManager sharedInstance];
-}
 
 #pragma mark - UICollectionViewDataSource
 
@@ -41,12 +32,6 @@
     cell.designer = [self.dataManager.itemsArray objectAtIndex:indexPath.row];
     
     return cell;
-}
-
-#pragma mark - UICollectionViewDelegate
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

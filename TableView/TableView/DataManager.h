@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "Designer.h"
 
 @interface DataManager : NSObject
 @property (strong, nonatomic) NSMutableArray *itemsArray;
@@ -14,4 +16,6 @@
 + (DataManager *)sharedInstance;
 - (NSArray *)femaleDesigners;
 - (NSArray *)maleDesigners;
+- (Designer *)getCurrentDesignerForIndexPath:(NSIndexPath *)indexPath;
+- (NSInteger)getIndexForDesigner:(Designer *)designer;
 @end

@@ -19,6 +19,8 @@
 		C47094961CC506E900A43A29 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C47094951CC506E900A43A29 /* DataManager.m */; };
 		C47094991CC5114800A43A29 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47094981CC5114800A43A29 /* GalleryViewController.m */; };
 		C470949C1CC511E400A43A29 /* DesignerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C470949B1CC511E400A43A29 /* DesignerCollectionViewCell.m */; };
+		C4A458D91CC519C000EEFCDC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A458D81CC519C000EEFCDC /* BaseViewController.m */; };
+		C4A458DC1CC51D2200EEFCDC /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A458DB1CC51D2200EEFCDC /* AsyncImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,10 @@
 		C47094981CC5114800A43A29 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		C470949A1CC511E400A43A29 /* DesignerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerCollectionViewCell.h; sourceTree = "<group>"; };
 		C470949B1CC511E400A43A29 /* DesignerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerCollectionViewCell.m; sourceTree = "<group>"; };
+		C4A458D71CC519C000EEFCDC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		C4A458D81CC519C000EEFCDC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		C4A458DA1CC51D2200EEFCDC /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		C4A458DB1CC51D2200EEFCDC /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +85,14 @@
 			children = (
 				C435DD241CC4F611007F925C /* AppDelegate.h */,
 				C435DD251CC4F611007F925C /* AppDelegate.m */,
+				C4A458D71CC519C000EEFCDC /* BaseViewController.h */,
+				C4A458D81CC519C000EEFCDC /* BaseViewController.m */,
 				C435DD271CC4F611007F925C /* HomeViewController.h */,
 				C435DD281CC4F611007F925C /* HomeViewController.m */,
 				C47094911CC5045600A43A29 /* AddViewController.h */,
 				C47094921CC5045600A43A29 /* AddViewController.m */,
+				C4A458DA1CC51D2200EEFCDC /* AsyncImageView.h */,
+				C4A458DB1CC51D2200EEFCDC /* AsyncImageView.m */,
 				C47094971CC5114800A43A29 /* GalleryViewController.h */,
 				C47094981CC5114800A43A29 /* GalleryViewController.m */,
 				C435DD381CC4FBEF007F925C /* DesignerTableViewCell.h */,
@@ -182,9 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C470949C1CC511E400A43A29 /* DesignerCollectionViewCell.m in Sources */,
+				C4A458D91CC519C000EEFCDC /* BaseViewController.m in Sources */,
 				C435DD291CC4F611007F925C /* HomeViewController.m in Sources */,
 				C47094991CC5114800A43A29 /* GalleryViewController.m in Sources */,
 				C435DD3D1CC4FC3B007F925C /* Designer.m in Sources */,
+				C4A458DC1CC51D2200EEFCDC /* AsyncImageView.m in Sources */,
 				C47094961CC506E900A43A29 /* DataManager.m in Sources */,
 				C47094931CC5045600A43A29 /* AddViewController.m in Sources */,
 				C435DD261CC4F611007F925C /* AppDelegate.m in Sources */,

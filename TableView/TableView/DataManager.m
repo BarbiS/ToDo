@@ -7,7 +7,7 @@
 //
 
 #import "DataManager.h"
-#import "Designer.h"
+#import "Constants.h"
 
 @implementation DataManager
 
@@ -65,6 +65,30 @@
     }
     
     return resultsArray;
+}
+
+- (Designer *)getCurrentDesignerForIndexPath:(NSIndexPath *)indexPath {
+    Designer *designer = nil;
+    
+    if (indexPath.section == MALE_GENDER) {
+        designer = [[self maleDesigners] objectAtIndex:indexPath.row];
+    } else {
+        designer = [[self femaleDesigners] objectAtIndex:indexPath.row];
+    }
+    
+    return designer;
+}
+
+- (NSInteger)getIndexForDesigner:(Designer *)designer {
+    for (int i = 0; i < self.itemsArray.count; i++) {
+        Designer *d = [self.itemsArray objectAtIndex:i];
+        
+        if ([d.name isEqualToString:designer.name]) {
+            return i;
+        }
+    }
+    
+    return INT_MAX;
 }
 
 @end

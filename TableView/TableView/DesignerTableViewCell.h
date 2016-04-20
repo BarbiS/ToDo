@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AsyncImageView.h"
 #import "Designer.h"
 
 @interface DesignerTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *designerImageView;
+@property (weak, nonatomic) IBOutlet AsyncImageView *designerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *designerNameLabel;
 @property (strong, nonatomic) Designer *designer;
 @end

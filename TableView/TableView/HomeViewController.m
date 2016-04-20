@@ -14,7 +14,6 @@
 
 @interface HomeViewController() <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) DataManager *dataManager;
 @end
 
 @implementation HomeViewController
@@ -25,8 +24,6 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [[UIView alloc] init];
-    
-    self.dataManager = [DataManager sharedInstance];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -52,11 +49,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DesignerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    if (indexPath.section == MALE_GENDER) {
-        cell.designer = [[self.dataManager maleDesigners] objectAtIndex:indexPath.row];
-    } else {
-        cell.designer = [[self.dataManager femaleDesigners] objectAtIndex:indexPath.row];
-    }
+    cell.designer = [self.dataManager getCurrentDesignerForIndexPath:indexPath];
     
     return cell;
 }
@@ -70,9 +63,9 @@
     AddViewController *toViewController = [storyboard instantiateViewControllerWithIdentifier:@"AddViewController"];
     
     if (indexPath.section == MALE_GENDER) {
-        toViewController.designer = [[self.dataManager maleDesigners] objectAtIndex:indexPath.row];
+        toViewController.designer = [self.dataManager getCurrentDesignerForIndexPath:indexPath];
     } else {
-        toViewController.designer = [[self.dataManager femaleDesigners] objectAtIndex:indexPath.row];
+        toViewController.designer = [self.dataManager getCurrentDesignerForIndexPath:indexPath];
     }
     
     [self.navigationController pushViewController:toViewController animated:YES];
@@ -84,6 +77,16 @@
     }
     
     return @"Female Designers";
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Designer *designer = [self.dataManager getCurrentDesignerForIndexPath:indexPath];
+        NSInteger index = [self.dataManager getIndexForDesigner:designer];
+        
+        [self.dataManager.itemsArray removeObjectAtIndex:index];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end

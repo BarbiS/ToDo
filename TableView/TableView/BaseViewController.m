@@ -1,5 +1,5 @@
 //
-//  GalleryViewController.h
+//  BaseViewController.m
 //  TableView
 //
 //  Created by Djuro Alfirevic on 4/18/16.
@@ -8,5 +8,12 @@
 
 #import "BaseViewController.h"
 
-@interface GalleryViewController : BaseViewController
+@implementation BaseViewController
+
+#pragma mark - Properties
+
+- (DataManager *)dataManager {
+    return [DataManager sharedInstance];
+}
+
 @end

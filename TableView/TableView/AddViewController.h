@@ -6,9 +6,9 @@
 //  Copyright © 2016 Djuro Alfirevic. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "Designer.h"
 
-@interface AddViewController : UIViewController
+@interface AddViewController : BaseViewController
 @property (strong, nonatomic) Designer *designer;
 @end
