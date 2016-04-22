@@ -15,6 +15,4 @@
 @property (weak, nonatomic) IBOutlet UIView *taskGroupView;
 
 
-
-
 @end

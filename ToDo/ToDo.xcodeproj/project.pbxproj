@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5600E55D1CB7EEF40030B618 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5600E55C1CB7EEF40030B618 /* HomeViewController.m */; };
+		564CC3181CCA52720077A093 /* WalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564CC3171CCA52720077A093 /* WalkViewController.m */; };
 		565088371CA9673700D11F29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 565088361CA9673700D11F29 /* main.m */; };
 		5650883A1CA9673700D11F29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 565088391CA9673700D11F29 /* AppDelegate.m */; };
 		5650883D1CA9673700D11F29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5650883C1CA9673700D11F29 /* ViewController.m */; };
@@ -75,6 +76,8 @@
 /* Begin PBXFileReference section */
 		5600E55B1CB7EEF40030B618 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5600E55C1CB7EEF40030B618 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		564CC3161CCA52720077A093 /* WalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkViewController.h; sourceTree = "<group>"; };
+		564CC3171CCA52720077A093 /* WalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkViewController.m; sourceTree = "<group>"; };
 		565088321CA9673700D11F29 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		565088361CA9673700D11F29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		565088381CA9673700D11F29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				5600E55C1CB7EEF40030B618 /* HomeViewController.m */,
 				568ACB7B1CC117AA000855F6 /* TaskTableViewCell.h */,
 				568ACB7C1CC117AA000855F6 /* TaskTableViewCell.m */,
+				564CC3161CCA52720077A093 /* WalkViewController.h */,
+				564CC3171CCA52720077A093 /* WalkViewController.m */,
 				568ACB7E1CC11851000855F6 /* Constants.h */,
 			);
 			name = Controllers;
@@ -396,6 +401,7 @@
 				5650883A1CA9673700D11F29 /* AppDelegate.m in Sources */,
 				56933E4F1CAC08E0005A2E9A /* SignUpViewController.m in Sources */,
 				565088371CA9673700D11F29 /* main.m in Sources */,
+				564CC3181CCA52720077A093 /* WalkViewController.m in Sources */,
 				568ACB7D1CC117AA000855F6 /* TaskTableViewCell.m in Sources */,
 				565088431CA9673700D11F29 /* ToDo.xcdatamodeld in Sources */,
 				5600E55D1CB7EEF40030B618 /* HomeViewController.m in Sources */,

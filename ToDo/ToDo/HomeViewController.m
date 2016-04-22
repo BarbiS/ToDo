@@ -30,6 +30,24 @@
     self.profileImageView.clipsToBounds=YES;
     self.profileImageView.layer.cornerRadius=self.profileImageView.frame.size.width/2;
     
+    // Set profile image, if NSData exists in NSUserDefaults
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:USER_IMAGE]) {
+        
+    }
+    
+    // NSData was previosly in NSUserDefaults when user selected an image
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:USER_IMAGE];
+    
+    self.profileImageView.image=[[UIImage alloc]initWithData:data];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:WALKTHROUGH_PRESENTED]) {
+        [self performSegueWithIdentifier:@"WalkthroughSegue" sender:self];
+    }
 }
 
 # pragma mark - UITableViewDataSource
@@ -123,9 +141,17 @@
         image = [info objectForKey:UIImagePickerControllerOriginalImage];
     }
     
-// After picking
-    
     self.profileImageView.image=image;
+    
+    // Concert select UIImage
+    NSData *data= UIImageJPEGRepresentation(image, 1.0);
+    
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:USER_IMAGE];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    // After picking image, close imagePickerController
     [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    
 }
 @end
