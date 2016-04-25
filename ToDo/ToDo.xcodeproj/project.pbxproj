@@ -17,6 +17,8 @@
 		565088451CA9673700D11F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 565088441CA9673700D11F29 /* Assets.xcassets */; };
 		565088481CA9673700D11F29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565088461CA9673700D11F29 /* LaunchScreen.storyboard */; };
 		565088551CA974D200D11F29 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565088541CA974D200D11F29 /* CoreLocation.framework */; };
+		5688DDC21CCE43470035B1DA /* WallkthroughCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688DDC11CCE43470035B1DA /* WallkthroughCollectionViewCell.m */; };
+		5688DDC51CCE439B0035B1DA /* WallkthroughItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688DDC41CCE439B0035B1DA /* WallkthroughItem.m */; };
 		568ACB7D1CC117AA000855F6 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 568ACB7C1CC117AA000855F6 /* TaskTableViewCell.m */; };
 		569011CC1CBE72140053C67C /* Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569011CB1CBE72140053C67C /* Pad.storyboard */; };
 		569011D31CBE74E50053C67C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569011D11CBE74E50053C67C /* Interface.storyboard */; };
@@ -90,6 +92,10 @@
 		565088471CA9673700D11F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		565088491CA9673700D11F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		565088541CA974D200D11F29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5688DDC01CCE43470035B1DA /* WallkthroughCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallkthroughCollectionViewCell.h; sourceTree = "<group>"; };
+		5688DDC11CCE43470035B1DA /* WallkthroughCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallkthroughCollectionViewCell.m; sourceTree = "<group>"; };
+		5688DDC31CCE439B0035B1DA /* WallkthroughItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallkthroughItem.h; sourceTree = "<group>"; };
+		5688DDC41CCE439B0035B1DA /* WallkthroughItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallkthroughItem.m; sourceTree = "<group>"; };
 		568ACB7B1CC117AA000855F6 /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
 		568ACB7C1CC117AA000855F6 /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 		568ACB7E1CC11851000855F6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -218,6 +224,10 @@
 				568ACB7C1CC117AA000855F6 /* TaskTableViewCell.m */,
 				564CC3161CCA52720077A093 /* WalkViewController.h */,
 				564CC3171CCA52720077A093 /* WalkViewController.m */,
+				5688DDC01CCE43470035B1DA /* WallkthroughCollectionViewCell.h */,
+				5688DDC11CCE43470035B1DA /* WallkthroughCollectionViewCell.m */,
+				5688DDC31CCE439B0035B1DA /* WallkthroughItem.h */,
+				5688DDC41CCE439B0035B1DA /* WallkthroughItem.m */,
 				568ACB7E1CC11851000855F6 /* Constants.h */,
 			);
 			name = Controllers;
@@ -397,11 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5688DDC21CCE43470035B1DA /* WallkthroughCollectionViewCell.m in Sources */,
 				5650883D1CA9673700D11F29 /* ViewController.m in Sources */,
 				5650883A1CA9673700D11F29 /* AppDelegate.m in Sources */,
 				56933E4F1CAC08E0005A2E9A /* SignUpViewController.m in Sources */,
 				565088371CA9673700D11F29 /* main.m in Sources */,
 				564CC3181CCA52720077A093 /* WalkViewController.m in Sources */,
+				5688DDC51CCE439B0035B1DA /* WallkthroughItem.m in Sources */,
 				568ACB7D1CC117AA000855F6 /* TaskTableViewCell.m in Sources */,
 				565088431CA9673700D11F29 /* ToDo.xcdatamodeld in Sources */,
 				5600E55D1CB7EEF40030B618 /* HomeViewController.m in Sources */,

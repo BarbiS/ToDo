@@ -8,6 +8,5 @@
 
 #import "ViewController.h"
 
-@interface WalkViewController : ViewController
-
+@interface WalkViewController : UIViewController
 @end
