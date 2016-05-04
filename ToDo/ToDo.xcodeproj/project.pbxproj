@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5600E55D1CB7EEF40030B618 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5600E55C1CB7EEF40030B618 /* HomeViewController.m */; };
+		562770901CDA1EF500587016 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5627708F1CDA1EF500587016 /* StatisticsViewController.m */; };
+		562770931CDA2DD000587016 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 562770921CDA2DD000587016 /* WebViewController.m */; };
 		564CC3181CCA52720077A093 /* WalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564CC3171CCA52720077A093 /* WalkViewController.m */; };
 		565088371CA9673700D11F29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 565088361CA9673700D11F29 /* main.m */; };
 		5650883A1CA9673700D11F29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 565088391CA9673700D11F29 /* AppDelegate.m */; };
@@ -78,6 +80,11 @@
 /* Begin PBXFileReference section */
 		5600E55B1CB7EEF40030B618 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5600E55C1CB7EEF40030B618 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5627708E1CDA1EF500587016 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		5627708F1CDA1EF500587016 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		562770911CDA2DD000587016 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		562770921CDA2DD000587016 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		562770941CDA352300587016 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		564CC3161CCA52720077A093 /* WalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkViewController.h; sourceTree = "<group>"; };
 		564CC3171CCA52720077A093 /* WalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkViewController.m; sourceTree = "<group>"; };
 		565088321CA9673700D11F29 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +186,7 @@
 				565088441CA9673700D11F29 /* Assets.xcassets */,
 				565088491CA9673700D11F29 /* Info.plist */,
 				565088361CA9673700D11F29 /* main.m */,
+				562770941CDA352300587016 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -228,6 +236,10 @@
 				5688DDC11CCE43470035B1DA /* WallkthroughCollectionViewCell.m */,
 				5688DDC31CCE439B0035B1DA /* WallkthroughItem.h */,
 				5688DDC41CCE439B0035B1DA /* WallkthroughItem.m */,
+				5627708E1CDA1EF500587016 /* StatisticsViewController.h */,
+				5627708F1CDA1EF500587016 /* StatisticsViewController.m */,
+				562770911CDA2DD000587016 /* WebViewController.h */,
+				562770921CDA2DD000587016 /* WebViewController.m */,
 				568ACB7E1CC11851000855F6 /* Constants.h */,
 			);
 			name = Controllers;
@@ -410,8 +422,10 @@
 				5688DDC21CCE43470035B1DA /* WallkthroughCollectionViewCell.m in Sources */,
 				5650883D1CA9673700D11F29 /* ViewController.m in Sources */,
 				5650883A1CA9673700D11F29 /* AppDelegate.m in Sources */,
+				562770901CDA1EF500587016 /* StatisticsViewController.m in Sources */,
 				56933E4F1CAC08E0005A2E9A /* SignUpViewController.m in Sources */,
 				565088371CA9673700D11F29 /* main.m in Sources */,
+				562770931CDA2DD000587016 /* WebViewController.m in Sources */,
 				564CC3181CCA52720077A093 /* WalkViewController.m in Sources */,
 				5688DDC51CCE439B0035B1DA /* WallkthroughItem.m in Sources */,
 				568ACB7D1CC117AA000855F6 /* TaskTableViewCell.m in Sources */,
@@ -559,6 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = $PROJECT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = ToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.cubes.ToDo;
@@ -572,6 +587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = $PROJECT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = ToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.cubes.ToDo;

@@ -40,6 +40,14 @@
     
     self.profileImageView.image=[[UIImage alloc]initWithData:data];
 
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //[self performSegueWithIdentifier:@"StatisticsSegue" sender:self];
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self performSegueWithIdentifier:@"AboutSegue" sender:self];
+    });
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -48,6 +56,10 @@
     if (![[NSUserDefaults standardUserDefaults] boolForKey:WALKTHROUGH_PRESENTED]) {
         [self performSegueWithIdentifier:@"WalkthroughSegue" sender:self];
     }
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 # pragma mark - UITableViewDataSource
