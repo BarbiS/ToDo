@@ -33,6 +33,11 @@
 		569011F01CBE74E50053C67C /* ToDoWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 569011CF1CBE74E50053C67C /* ToDoWatch.app */; };
 		56933E4C1CAC0611005A2E9A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56933E4B1CAC0611005A2E9A /* LoginViewController.m */; };
 		56933E4F1CAC08E0005A2E9A /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56933E4E1CAC08E0005A2E9A /* SignUpViewController.m */; };
+		569D08471CE3575A00917431 /* Task+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 569D08441CE3575A00917431 /* Task+CoreDataProperties.m */; };
+		569D08481CE3575A00917431 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 569D08461CE3575A00917431 /* Task.m */; };
+		569D08501CE35AEF00917431 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 569D084F1CE35AEF00917431 /* DataManager.m */; };
+		569D08521CE35B3100917431 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569D08511CE35B3100917431 /* MapKit.framework */; };
+		569D08541CE35B3A00917431 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569D08531CE35B3A00917431 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +130,14 @@
 		56933E4B1CAC0611005A2E9A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		56933E4D1CAC08E0005A2E9A /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		56933E4E1CAC08E0005A2E9A /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		569D08431CE3575A00917431 /* Task+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Task+CoreDataProperties.h"; path = "../Task+CoreDataProperties.h"; sourceTree = "<group>"; };
+		569D08441CE3575A00917431 /* Task+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Task+CoreDataProperties.m"; path = "../Task+CoreDataProperties.m"; sourceTree = "<group>"; };
+		569D08451CE3575A00917431 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = ../Task.h; sourceTree = "<group>"; };
+		569D08461CE3575A00917431 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = ../Task.m; sourceTree = "<group>"; };
+		569D084E1CE35AEF00917431 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		569D084F1CE35AEF00917431 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		569D08511CE35B3100917431 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		569D08531CE35B3A00917431 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569D08541CE35B3A00917431 /* CoreData.framework in Frameworks */,
+				569D08521CE35B3100917431 /* MapKit.framework in Frameworks */,
 				565088551CA974D200D11F29 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +188,7 @@
 			children = (
 				565088501CA96BF600D11F29 /* Models */,
 				565088511CA96C1400D11F29 /* Views */,
+				569D084A1CE35A3E00917431 /* Utilities */,
 				565088521CA96C2D00D11F29 /* Controllers */,
 				565088351CA9673700D11F29 /* Supporting Files */,
 			);
@@ -204,6 +220,10 @@
 			isa = PBXGroup;
 			children = (
 				565088411CA9673700D11F29 /* ToDo.xcdatamodeld */,
+				569D08431CE3575A00917431 /* Task+CoreDataProperties.h */,
+				569D08441CE3575A00917431 /* Task+CoreDataProperties.m */,
+				569D08451CE3575A00917431 /* Task.h */,
+				569D08461CE3575A00917431 /* Task.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -248,6 +268,8 @@
 		565088531CA96C6300D11F29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				569D08531CE35B3A00917431 /* CoreData.framework */,
+				569D08511CE35B3100917431 /* MapKit.framework */,
 				565088541CA974D200D11F29 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -285,6 +307,15 @@
 				569011E11CBE74E50053C67C /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		569D084A1CE35A3E00917431 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				569D084E1CE35AEF00917431 /* DataManager.h */,
+				569D084F1CE35AEF00917431 /* DataManager.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +452,7 @@
 			files = (
 				5688DDC21CCE43470035B1DA /* WallkthroughCollectionViewCell.m in Sources */,
 				5650883D1CA9673700D11F29 /* ViewController.m in Sources */,
+				569D08471CE3575A00917431 /* Task+CoreDataProperties.m in Sources */,
 				5650883A1CA9673700D11F29 /* AppDelegate.m in Sources */,
 				562770901CDA1EF500587016 /* StatisticsViewController.m in Sources */,
 				56933E4F1CAC08E0005A2E9A /* SignUpViewController.m in Sources */,
@@ -428,8 +460,10 @@
 				562770931CDA2DD000587016 /* WebViewController.m in Sources */,
 				564CC3181CCA52720077A093 /* WalkViewController.m in Sources */,
 				5688DDC51CCE439B0035B1DA /* WallkthroughItem.m in Sources */,
+				569D08481CE3575A00917431 /* Task.m in Sources */,
 				568ACB7D1CC117AA000855F6 /* TaskTableViewCell.m in Sources */,
 				565088431CA9673700D11F29 /* ToDo.xcdatamodeld in Sources */,
+				569D08501CE35AEF00917431 /* DataManager.m in Sources */,
 				5600E55D1CB7EEF40030B618 /* HomeViewController.m in Sources */,
 				56933E4C1CAC0611005A2E9A /* LoginViewController.m in Sources */,
 			);
