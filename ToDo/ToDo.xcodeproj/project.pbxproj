@@ -19,6 +19,8 @@
 		565088451CA9673700D11F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 565088441CA9673700D11F29 /* Assets.xcassets */; };
 		565088481CA9673700D11F29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565088461CA9673700D11F29 /* LaunchScreen.storyboard */; };
 		565088551CA974D200D11F29 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565088541CA974D200D11F29 /* CoreLocation.framework */; };
+		56521CBC1CEC87FF00198888 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56521CBB1CEC87FF00198888 /* MenuView.m */; };
+		56521CBE1CEC885900198888 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56521CBD1CEC885900198888 /* MenuView.xib */; };
 		5688DDC21CCE43470035B1DA /* WallkthroughCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688DDC11CCE43470035B1DA /* WallkthroughCollectionViewCell.m */; };
 		5688DDC51CCE439B0035B1DA /* WallkthroughItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688DDC41CCE439B0035B1DA /* WallkthroughItem.m */; };
 		568ACB7D1CC117AA000855F6 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 568ACB7C1CC117AA000855F6 /* TaskTableViewCell.m */; };
@@ -104,6 +106,9 @@
 		565088471CA9673700D11F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		565088491CA9673700D11F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		565088541CA974D200D11F29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		56521CBA1CEC87FF00198888 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		56521CBB1CEC87FF00198888 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		56521CBD1CEC885900198888 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		5688DDC01CCE43470035B1DA /* WallkthroughCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallkthroughCollectionViewCell.h; sourceTree = "<group>"; };
 		5688DDC11CCE43470035B1DA /* WallkthroughCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallkthroughCollectionViewCell.m; sourceTree = "<group>"; };
 		5688DDC31CCE439B0035B1DA /* WallkthroughItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallkthroughItem.h; sourceTree = "<group>"; };
@@ -233,6 +238,9 @@
 			children = (
 				5650883E1CA9673700D11F29 /* Main.storyboard */,
 				565088461CA9673700D11F29 /* LaunchScreen.storyboard */,
+				56521CBA1CEC87FF00198888 /* MenuView.h */,
+				56521CBB1CEC87FF00198888 /* MenuView.m */,
+				56521CBD1CEC885900198888 /* MenuView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -420,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				565088481CA9673700D11F29 /* LaunchScreen.storyboard in Resources */,
+				56521CBE1CEC885900198888 /* MenuView.xib in Resources */,
 				565088451CA9673700D11F29 /* Assets.xcassets in Resources */,
 				569011CC1CBE72140053C67C /* Pad.storyboard in Resources */,
 				565088401CA9673700D11F29 /* Main.storyboard in Resources */,
@@ -455,6 +464,7 @@
 				569D08471CE3575A00917431 /* Task+CoreDataProperties.m in Sources */,
 				5650883A1CA9673700D11F29 /* AppDelegate.m in Sources */,
 				562770901CDA1EF500587016 /* StatisticsViewController.m in Sources */,
+				56521CBC1CEC87FF00198888 /* MenuView.m in Sources */,
 				56933E4F1CAC08E0005A2E9A /* SignUpViewController.m in Sources */,
 				565088371CA9673700D11F29 /* main.m in Sources */,
 				562770931CDA2DD000587016 /* WebViewController.m in Sources */,

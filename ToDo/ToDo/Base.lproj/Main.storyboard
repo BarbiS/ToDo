@@ -221,12 +221,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" id="DcT-m5-kG3" userLabel="Manu View" customClass="MenuView">
+                                <rect key="frame" x="205" y="437" width="170" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="RTx-6f-B3T"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="menuView" destination="DcT-m5-kG3" id="oCA-8S-nQu"/>
                         <outlet property="profileImageView" destination="JwF-G2-Hu3" id="80K-9u-1iS"/>
                         <segue destination="2Vz-pr-YzC" kind="push" identifier="WalkthroughSegue" id="5xC-RS-OiS"/>
                         <segue destination="5Kx-An-2Nl" kind="push" identifier="StatisticsSegue" id="adl-2V-vIK"/>
