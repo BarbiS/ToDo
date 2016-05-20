@@ -41,13 +41,20 @@
     
     self.profileImageView.image=[[UIImage alloc]initWithData:data];
 
-    //dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //[self performSegueWithIdentifier:@"StatisticsSegue" sender:self];
-    //});
+   // dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+      //  [self performSegueWithIdentifier:@"StatisticsSegue" sender:self];
+     //   [self presentErrorWithTitle:@"Hey" andError:@"Nema konekcije"];
+   // });
     
    // dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
      //   [self performSegueWithIdentifier:@"AboutSegue" sender:self];
-   // });
+    //});
+    
+    /*dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self performSegueWithIdentifier:@"TaskDetailsSegue" sender:self];
+    });*/
+    
+    self.menuView.delegate = self;
 
 }
 
@@ -169,7 +176,24 @@
 #pragma mark - MenuViewDelegate
 
 - (void)menuViewOptionTapped:(MenuOption)option {
-    
+    switch (option) {
+        case TSDK_DETAILS_MENU_OPTION: {
+            [self performSegueWithIdentifier:@"TaskDetailsSegue" sender:nil];
+        }break;
+            
+        case ABOUT_MENU_OPTION: {
+            [self performSegueWithIdentifier:@"AboutSegue" sender:nil];
+        }break;
+            
+        case STATISTICS_MENU_OPTION: {
+            [self performSegueWithIdentifier:@"StatisticsSegue" sender:nil];
+        }break;
+            
+        case WALKTHROUGH_MENU_OPTION: {
+            [self performSegueWithIdentifier:@"WalkthroughSegue" sender:nil];
+        }break;
+            
+    }
 }
 
 @end

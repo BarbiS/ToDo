@@ -16,6 +16,7 @@
 #define kOrangeColor                    COLOR(254.0, 172.0, 73.0, 1.0)
 #define kPurpleColor                    COLOR(187.0, 114.0, 255.0, 1.0)
 #define kTurquoiseColor                 COLOR(72.0, 211.0, 194.0, 1.0)
+#define kDescPlaceholderColor           COLOR(29.0, 29.0, 38.0, 1.0)
 
 // Enums
 typedef  NS_ENUM(NSInteger, TaskGroup) {
@@ -36,3 +37,8 @@ static NSString *const WALKTHROUGH_PRESENTED   = @"WALKTHROUGH_PRESENTED";
 
 // Notifications
 static NSString *const CITY_CHANGED             = @"CITY_CHANGED";
+static NSString *const OK_STRING                = @"OK";
+static NSString *const EMPTY_STRING             = @"";
+
+// URLs
+static NSString *const CUBES_URL               =@"http://www.cubes.rs";

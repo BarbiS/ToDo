@@ -237,6 +237,7 @@
                         <segue destination="2Vz-pr-YzC" kind="push" identifier="WalkthroughSegue" id="5xC-RS-OiS"/>
                         <segue destination="5Kx-An-2Nl" kind="push" identifier="StatisticsSegue" id="adl-2V-vIK"/>
                         <segue destination="Zhn-Pd-DiI" kind="modal" identifier="AboutSegue" id="Lla-Hv-4c6"/>
+                        <segue destination="akn-1b-4Te" kind="push" identifier="TaskDetailsSegue" id="20o-Ce-hKu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3U-Ah-3Od" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -323,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmn-w8-v8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426.5" y="394.5"/>
+            <point key="canvasLocation" x="1934.5" y="-39.5"/>
         </scene>
         <!--Statistics View Controller-->
         <scene sceneID="Ufd-uh-iqm">
@@ -341,14 +342,6 @@
                                 <rect key="frame" x="155" y="419" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qcb-gz-jwQ">
-                                <rect key="frame" x="20" y="34" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="backButtonTapped" destination="5Kx-An-2Nl" eventType="touchUpInside" id="57l-Xc-6wh"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="not-completed" id="fxf-qk-ekO">
                                 <rect key="frame" x="20" y="240" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -477,6 +470,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qcb-gz-jwQ">
+                                <rect key="frame" x="20" y="34" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonTapped" destination="5Kx-An-2Nl" eventType="touchUpInside" id="57l-Xc-6wh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -493,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJb-Mr-VBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426.5" y="1145.5"/>
+            <point key="canvasLocation" x="1950.5" y="689.5"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="yDK-Q9-Fwa">
@@ -531,6 +532,159 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdH-7b-Ea4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="937.5" y="1789.5"/>
+        </scene>
+        <!--Task Details View Controller-->
+        <scene sceneID="Sqx-CX-q7n">
+            <objects>
+                <viewController id="akn-1b-4Te" customClass="TaskDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S9E-H4-LCE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addtask-bg" id="RDc-oh-mIw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KVf-hX-ZeD">
+                                <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonTapped" destination="5Kx-An-2Nl" eventType="touchUpInside" id="1b7-cn-ny9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9sN-Wl-a3G">
+                                <rect key="frame" x="291" y="158" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="akn-1b-4Te" eventType="touchUpInside" id="vOR-1A-aOC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Title" textAlignment="natural" minimumFontSize="17" id="WBF-WS-MVT">
+                                <rect key="frame" x="10" y="110" width="357" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="35"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="akn-1b-4Te" id="vUU-jW-ERh"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Short description" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="wzC-xI-6GM">
+                                <rect key="frame" x="9" y="225" width="357" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="akn-1b-4Te" id="Ow2-7T-nRS"/>
+                                </connections>
+                            </textField>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" id="Wtg-EI-U36" userLabel="Separator">
+                                <rect key="frame" x="0.0" y="263" width="375" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GSR-7p-6Kn">
+                                <rect key="frame" x="9" y="279" width="340" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.20000000298023224" contentMode="scaleToFill" id="Y8q-eX-ddb" userLabel="Separator">
+                                <rect key="frame" x="0.0" y="313" width="375" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UIq-5O-RwV">
+                                <rect key="frame" x="9" y="330" width="340" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="2Dr-cJ-kPP">
+                                <rect key="frame" x="20" y="374" width="335" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="akn-1b-4Te" id="Jbr-K8-d4s"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NEi-wL-xuI">
+                                <rect key="frame" x="336" y="272" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="map-off"/>
+                                <state key="selected" image="map-on"/>
+                                <connections>
+                                    <action selector="mapButtonTapped:" destination="akn-1b-4Te" eventType="touchUpInside" id="dpf-J2-b2N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lCI-SS-Gqp">
+                                <rect key="frame" x="248" y="334" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <view contentMode="scaleToFill" id="kOW-O0-1Nl">
+                                <rect key="frame" x="254" y="343" width="15" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.82745098039215681" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="E58-vY-ZQ8">
+                                <rect key="frame" x="297" y="343" width="15" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.67450980390000004" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hgf-72-f8M" userLabel="not completed">
+                                <rect key="frame" x="291" y="336" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="groupButtonTapped:" destination="akn-1b-4Te" eventType="touchUpInside" id="ulY-fU-c8k"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="K5Y-mN-E69">
+                                <rect key="frame" x="339" y="343" width="15" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73333333333333328" green="0.44705882352941173" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7ds-ey-rnP" userLabel="completed">
+                                <rect key="frame" x="246" y="336" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="groupButtonTapped:" destination="akn-1b-4Te" eventType="touchUpInside" id="b9V-3h-aOA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group-selector" id="hLN-Ou-56P">
+                                <rect key="frame" x="252" y="341" width="19" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jDc-aQ-25G" userLabel="in progress">
+                                <rect key="frame" x="331" y="336" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="groupButtonTapped:" destination="akn-1b-4Te" eventType="touchUpInside" id="dey-FG-zzm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pcv-eZ-mwG"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="addButton" destination="9sN-Wl-a3G" id="tuU-Ds-wA5"/>
+                        <outlet property="cityLabel" destination="GSR-7p-6Kn" id="hwk-yT-JO1"/>
+                        <outlet property="completedView" destination="kOW-O0-1Nl" id="dmW-qT-wTe"/>
+                        <outlet property="descriptionTextField" destination="wzC-xI-6GM" id="mNo-FI-XyE"/>
+                        <outlet property="groupSelectorImageView" destination="hLN-Ou-56P" id="ASm-HX-PA6"/>
+                        <outlet property="inProgressView" destination="K5Y-mN-E69" id="OgU-0Z-4Uy"/>
+                        <outlet property="mapButton" destination="NEi-wL-xuI" id="qhO-ZB-7YP"/>
+                        <outlet property="mapView" destination="2Dr-cJ-kPP" id="YLa-Ei-4j8"/>
+                        <outlet property="notCompletedView" destination="E58-vY-ZQ8" id="hy6-bI-aTX"/>
+                        <outlet property="titleTextField" destination="WBF-WS-MVT" id="9AC-Zs-i97"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCW-zy-9mR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.5" y="1566.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -666,6 +820,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="126" height="126"/>
+        <image name="addtask-bg" width="750" height="380"/>
         <image name="back" width="42" height="42"/>
         <image name="badge" width="51" height="51"/>
         <image name="birthday" width="40" height="43"/>
@@ -673,9 +829,12 @@
         <image name="completed" width="256" height="256"/>
         <image name="email" width="41" height="35"/>
         <image name="graph" width="126" height="126"/>
+        <image name="group-selector" width="21" height="21"/>
         <image name="home-bg" width="750" height="700"/>
         <image name="in-progress" width="146" height="147"/>
         <image name="login-bg" width="750" height="1334"/>
+        <image name="map-off" width="40" height="40"/>
+        <image name="map-on" width="40" height="40"/>
         <image name="not-completed" width="146" height="147"/>
         <image name="password" width="40" height="44"/>
         <image name="signup-bg" width="750" height="1334"/>
