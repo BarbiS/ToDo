@@ -7,16 +7,46 @@
 //
 
 #import "AppDelegate.h"
+#import "DataManager.h"
+#import <CoreLocation/CoreLocation.h>
+
+@interface  AppDelegate () <CLLocationManagerDelegate>
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@end
 
 @implementation AppDelegate
 
+#pragma mark - Private API
+
+-(void)configureLocationManager {
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    [self.locationManager requestAlwaysAuthorization];
+    [self.locationManager startMonitoringSignificantLocationChanges];
+}
+
+#pragma mark - UiApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self configureLocationManager];
+    
     return YES;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    if (locations.count > 0) {
+        [DataManager sharedInstance].userLocation = [locations firstObject];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSLog(@"Location manager error: %@", [error localizedDescription]);
 }
 
 #pragma mark - Core Data stack
@@ -64,7 +94,6 @@
     
     return _persistentStoreCoordinator;
 }
-
 
 - (NSManagedObjectContext *)managedObjectContext {
     // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)

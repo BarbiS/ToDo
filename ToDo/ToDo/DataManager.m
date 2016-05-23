@@ -33,6 +33,8 @@
                            CLPlacemark *placemark  = [placemarks firstObject];
                            
                            self.userLocality = placemark.locality;
+                           
+                           [[NSNotificationCenter defaultCenter] postNotificationName:CITY_CHANGED object:nil];
                        }
                    }];
 }

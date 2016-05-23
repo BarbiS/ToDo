@@ -27,8 +27,8 @@ typedef  NS_ENUM(NSInteger, TaskGroup) {
 
 // User defaults
 static NSString *const USER_IMAGE              = @"USER_IMAGE";
-
 static NSString *const WALKTHROUGH_PRESENTED   = @"WALKTHROUGH_PRESENTED";
+static NSString *const LOGED_IN                = @"LOGED_IN";
 
 #endif /* Constants_h */
 

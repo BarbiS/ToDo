@@ -232,8 +232,12 @@
                     <navigationItem key="navigationItem" id="RTx-6f-B3T"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="badgeImageView" destination="rwk-Or-o5b" id="dbG-02-Gf6"/>
+                        <outlet property="badgeLabel" destination="lV1-at-daZ" id="9Ma-V8-dHE"/>
                         <outlet property="menuView" destination="DcT-m5-kG3" id="oCA-8S-nQu"/>
                         <outlet property="profileImageView" destination="JwF-G2-Hu3" id="80K-9u-1iS"/>
+                        <outlet property="tableView" destination="IkZ-yt-A3m" id="l3f-lh-cyi"/>
+                        <outlet property="welcomeLabel" destination="kLo-uV-Ktm" id="19x-ug-TuN"/>
                         <segue destination="2Vz-pr-YzC" kind="push" identifier="WalkthroughSegue" id="5xC-RS-OiS"/>
                         <segue destination="5Kx-An-2Nl" kind="push" identifier="StatisticsSegue" id="adl-2V-vIK"/>
                         <segue destination="Zhn-Pd-DiI" kind="modal" identifier="AboutSegue" id="Lla-Hv-4c6"/>
@@ -551,6 +555,7 @@
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backButtonTapped" destination="5Kx-An-2Nl" eventType="touchUpInside" id="1b7-cn-ny9"/>
+                                    <action selector="backButtonTapped" destination="akn-1b-4Te" eventType="touchUpInside" id="cH0-8o-YSp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9sN-Wl-a3G">
@@ -566,7 +571,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="35"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="akn-1b-4Te" id="vUU-jW-ERh"/>
                                 </connections>

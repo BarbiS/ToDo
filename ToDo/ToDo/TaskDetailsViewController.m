@@ -56,6 +56,51 @@
     }];
 }
 
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self configureTextFieldPlaceholders];
+    [self registerForNotifications];
+    [self configureMap];
+    
+    self.addButton.alpha = ZERO_VALUE;
+    
+    if (self.task) {
+        [self fillData];
+    } else {
+        self.group = NOT_COMPLETED_TASK_GROUP;
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.addButton.alpha = 1.0;
+    }];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    
+}
 
 #pragma mark - Actions
 
@@ -68,6 +113,7 @@
 }
 
 - (IBAction)addButtonTapped:(id)sender {
+    [self saveTask];
 }
 
 - (IBAction)groupButtonTapped:(UIButton *)sender {
@@ -105,11 +151,29 @@
 }
 
 - (void)configureAlert {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Save Task"
+                                                                                 message:@"Are you shure you want to go back without saving"
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Yes"
+                                                         style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction *action) {;
+                                                              [self.navigationController popViewControllerAnimated:YES];
+    }];
     
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"No"
+                                                        style:UIAlertActionStyleCancel
+                                                      handler:NULL];
+    [alertController addAction:yesAction];
+    [alertController addAction:noAction];
+    
+    [self presentViewController:alertController animated:YES completion:NULL];
 }
 
 - (BOOL)isEdited {
-    return YES;
+    if (self.titleTextField.text.length > 0) {
+        return YES;
+    }
+    return NO;
 }
 
 - (void)saveTask{
@@ -134,10 +198,62 @@
     self.titleTextField.text  = EMPTY_STRING;
     self.descriptionTextField.text = EMPTY_STRING;
     [self backButtonTapped];
+}
+
+- (void)registerForNotifications {
+    [[NSNotificationCenter defaultCenter] addObserverForName:CITY_CHANGED
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note)
+    {
+        self.cityLabel.text = [DataManager sharedInstance].userLocality;
+    }];
+}
+
+- (void)cofigureMap {
+    self.mapView.alpha = ZERO_VALUE;
+    
+    CLLocationCoordinate2D coordinate;
+    
+    if (self.task) {
+        //na mapu dodam ciodu
+        [self.mapView addAnnotation:self.task];
+        //koordinate taska
+        coordinate = self.task.coordinate;
+        //ukoliko ne postoji
+    } else {
+        self.mapView.showsUserLocation = YES;
+        coordinate = [DataManager sharedInstance].userLocation.coordinate;
+    }
+    //zumiram mapu
+    [self zoomMapToCoordinate:coordinate];
+    //proverim da li je setovan
+    if ([DataManager sharedInstance].userLocality.length > 0) {
+        //setujem
+          self.cityLabel.text = [DataManager sharedInstance].userLocality;
+    }
+}
+
+-(void)zoomMapToCoordinate:(CLLocationCoordinate2D)coordinate {
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, kRegionRadius * 2.0, kRegionRadius * 2.0);
+    MKCoordinateRegion coordinateRegion = [self.mapView regionThatFits:region];
+    [self.mapView setRegion:coordinateRegion animated:YES];
+}
+
+// popuni ui elemente sa podacima iz tog taska
+- (void)fillData {
+    self.titleTextField.text = self.task.heading;
+    self.descriptionTextField.text = self.task.desc;
+    self.group = [self.task.group integerValue];
+    [self.mapView addAnnotation:self.task];
+}
+    
+- (void)configureMap {
     
 }
 
-- (void)viewDidLoad {
-    [self configureTextFieldPlaceholders];
-}
+
+
+
+
 @end

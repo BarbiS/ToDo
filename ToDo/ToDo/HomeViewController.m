@@ -10,13 +10,58 @@
 #import "TaskTableViewCell.h"
 #import "Constants.h"
 #import "MenuView.h"
+#import "DataManager.h"
+#import "Task.h"
+
 
 @interface HomeViewController ()  <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MenuViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *badgeImageView;
 @property (weak, nonatomic) IBOutlet MenuView *menuView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *badgeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+@property (strong, nonatomic) NSMutableArray *itemsArray;
+
 @end
 
 @implementation HomeViewController
+
+#pragma mark - Properties
+
+- (NSMutableArray *)itemsArray {
+    return [[DataManager sharedInstance] fetchEntity:NSStringFromClass([Task class]) withFilter:nil withSortAsc:YES forKey:@"date"];
+}
+
+#pragma mark - private APi
+
+- (void)configureBadge {
+    self.badgeImageView.alpha = (self.itemsArray.count == 0) ? ZERO_VALUE : 1.0;
+    self.badgeLabel.alpha = (self.itemsArray.count == 0) ? ZERO_VALUE : 1.0;
+    self.badgeLabel.text = [NSString stringWithFormat:@"%ld", self.itemsArray.count];
+}
+
+- (void)configureProfileImage {
+    self.profileImageView.clipsToBounds=YES;
+    self.profileImageView.layer.cornerRadius=self.profileImageView.frame.size.width/2;
+    
+    // Set profile image, if NSData exists in NSUserDefaults
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:USER_IMAGE]) {
+        // NSData was previosly in NSUserDefaults when user selected an image
+        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:USER_IMAGE];
+        
+        self.profileImageView.image=[[UIImage alloc]initWithData:data];
+    }
+}
+
+- (void)configureWelcomeLabel {
+    if ([Helpers isMorning]) {
+        self.welcomeLabel.text = @"Good Morning!";
+    } else {
+        self.welcomeLabel.text = @"Good afternoon";
+    }
+}
 
 # pragma mark - View lifecycle
 
@@ -28,18 +73,9 @@
     tap.numberOfTapsRequired=1;
     [self.profileImageView addGestureRecognizer:tap];
     
-    self.profileImageView.clipsToBounds=YES;
-    self.profileImageView.layer.cornerRadius=self.profileImageView.frame.size.width/2;
+    [self.tableView reloadData];
     
-    // Set profile image, if NSData exists in NSUserDefaults
-    if ([[NSUserDefaults standardUserDefaults]objectForKey:USER_IMAGE]) {
-        
-    }
-    
-    // NSData was previosly in NSUserDefaults when user selected an image
-    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:USER_IMAGE];
-    
-    self.profileImageView.image=[[UIImage alloc]initWithData:data];
+ 
 
    // dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
       //  [self performSegueWithIdentifier:@"StatisticsSegue" sender:self];
@@ -74,10 +110,10 @@
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.itemsArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TaskTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
@@ -195,5 +231,4 @@
             
     }
 }
-
 @end
