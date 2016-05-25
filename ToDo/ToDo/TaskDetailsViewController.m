@@ -192,7 +192,12 @@
         self.task.heading = self.titleTextField.text;
         self.task.desc = self.descriptionTextField.text;
         self.task.group = [NSNumber numberWithInteger:self.group];
-        [[DataManager sharedInstance] saveTaskWithTitle:self.titleTextField.text description:self.descriptionTextField.text group:self.group];
+        [[DataManager sharedInstance] updateObject:self.task];
+        
+    } else {
+        [[DataManager sharedInstance] saveTaskWithTitle:self.titleTextField.text
+                                            description:self.descriptionTextField.text
+                                                  group:self.group];
     }
     
     self.titleTextField.text  = EMPTY_STRING;
@@ -247,13 +252,28 @@
     self.group = [self.task.group integerValue];
     [self.mapView addAnnotation:self.task];
 }
-    
-- (void)configureMap {
-    
+
+-(void)configureMap{
+        self.mapView.alpha = ZERO_VALUE;
+        
+        CLLocationCoordinate2D coordinate;
+        
+        if (self.task) {
+            //na mapu dodajem ciodu
+            [self.mapView addAnnotation:self.task];
+            
+            coordinate=self.task.coordinate;
+        }
+        else {
+            self.mapView.showsUserLocation = YES;
+            coordinate=[DataManager sharedInstance].userLocation.coordinate;
+        }
+        
+        [self zoomMapToCoordinate:coordinate];
+        
+        if ([DataManager sharedInstance].userLocality.length>0) {
+            self.cityLabel.text = [DataManager sharedInstance].userLocality;
+        }
 }
-
-
-
-
 
 @end

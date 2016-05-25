@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Task.h"
 
 @interface TaskTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *taskTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *taskDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIView *taskGroupView;
-
-
+@property (strong, nonatomic) Task *task;
 @end

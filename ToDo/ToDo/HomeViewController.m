@@ -12,6 +12,10 @@
 #import "MenuView.h"
 #import "DataManager.h"
 #import "Task.h"
+#import "WebViewController.h"
+#import "Helpers.h"
+#import "WalkViewController.h"
+#import "TaskDetailsViewController.h"
 
 
 @interface HomeViewController ()  <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MenuViewDelegate>
@@ -23,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *badgeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (strong, nonatomic) NSMutableArray *itemsArray;
+@property (strong, nonatomic) Task *selectedTask;
 
 @end
 
@@ -67,28 +72,16 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+   
+    [self configureProfileImage];
+    [self configureWelcomeLabel];
+    
+    self.tableView.tableFooterView = [[UIView alloc]init];
     
     UITapGestureRecognizer *tap= [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                         action:@selector(pickImage)];
     tap.numberOfTapsRequired=1;
     [self.profileImageView addGestureRecognizer:tap];
-    
-    [self.tableView reloadData];
-    
- 
-
-   // dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-      //  [self performSegueWithIdentifier:@"StatisticsSegue" sender:self];
-     //   [self presentErrorWithTitle:@"Hey" andError:@"Nema konekcije"];
-   // });
-    
-   // dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-     //   [self performSegueWithIdentifier:@"AboutSegue" sender:self];
-    //});
-    
-    /*dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self performSegueWithIdentifier:@"TaskDetailsSegue" sender:self];
-    });*/
     
     self.menuView.delegate = self;
 
@@ -102,10 +95,30 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+    [self configureBadge];
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
 
+#pragma mark - Segue Managment
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"AboutSegue"]) {
+        WebViewController *webViewController = (WebViewController *)segue.destinationViewController;
+        webViewController.urlString = CUBES_URL;
+    }
+    
+    if ([segue.identifier isEqualToString:@"TaskDetailSegue"]) {
+        TaskDetailsViewController *taskDetailsViewController = (TaskDetailsViewController *)segue.destinationViewController;
+        taskDetailsViewController.task = self.selectedTask;
+    }
+}
 # pragma mark - UITableViewDataSource
 
 
@@ -116,28 +129,29 @@
     return self.itemsArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TaskTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.taskTitleLabel.text= [NSString stringWithFormat:@"Red %ld", indexPath.row];
+    TaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    switch (indexPath.row) {
-        case COMPLETED_TASK_GROUP:
-            cell.taskGroupView.backgroundColor = kTurquoiseColor;
-            break;
-            
-        case NOT_COMPLETED_TASK_GROUP:
-            cell.taskGroupView.backgroundColor = kOrangeColor;
-            break;
-            
-        case IN_PROGRESS_TASK_GROUP:
-            cell.taskGroupView.backgroundColor = kPurpleColor;
-            break;
-            
-        default:
-            cell.taskGroupView.backgroundColor = kTurquoiseColor;
-            break;
-    }
+    //Task *task = [self.itemsArray objectAtIndex:indexPath.row];
+   //cell.task = task;
     
+    cell.task = self.itemsArray[indexPath.row];
     return cell;
+    }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        Task *task = [self.itemsArray objectAtIndex:indexPath.row];
+        [[DataManager sharedInstance] deleteObjectInDatabase:task];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        [tableView reloadData];
+        [self configureBadge];
+    }
 }
 
 # pragma mark - UITableViewDelegate
@@ -145,7 +159,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
      return 70;
 }
-
 - (void)pickImage {
     UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"Choose source"
                                                                  message:nil
@@ -183,6 +196,15 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    Task *task = [self.itemsArray objectAtIndex:indexPath.row];
+    self.selectedTask = task;
+    [self performSegueWithIdentifier:@"TaskDetailsSegue" sender:nil];
+}
+
 # pragma mark - UIImagePickerControllerDelegate
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -214,6 +236,7 @@
 - (void)menuViewOptionTapped:(MenuOption)option {
     switch (option) {
         case TSDK_DETAILS_MENU_OPTION: {
+            self.selectedTask = nil;
             [self performSegueWithIdentifier:@"TaskDetailsSegue" sender:nil];
         }break;
             

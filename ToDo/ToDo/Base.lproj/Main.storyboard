@@ -571,7 +571,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="35"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="akn-1b-4Te" id="vUU-jW-ERh"/>
                                 </connections>
@@ -580,7 +580,7 @@
                                 <rect key="frame" x="9" y="225" width="357" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="akn-1b-4Te" id="Ow2-7T-nRS"/>
                                 </connections>
@@ -639,7 +639,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.67450980390000004" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hgf-72-f8M" userLabel="not completed">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hgf-72-f8M" userLabel="not completed">
                                 <rect key="frame" x="291" y="336" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -651,7 +651,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.73333333333333328" green="0.44705882352941173" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7ds-ey-rnP" userLabel="completed">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7ds-ey-rnP" userLabel="completed">
                                 <rect key="frame" x="246" y="336" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -662,7 +662,7 @@
                                 <rect key="frame" x="252" y="341" width="19" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jDc-aQ-25G" userLabel="in progress">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jDc-aQ-25G" userLabel="in progress">
                                 <rect key="frame" x="331" y="336" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -795,8 +795,10 @@
                         <outlet property="footerView" destination="Snh-wd-CB0" id="7Hf-eH-yDJ"/>
                         <outlet property="maskLogoView" destination="MBX-3U-dRr" id="mjk-1J-tke"/>
                         <outlet property="passwordImageView" destination="ZSL-fv-fBC" id="erm-Cd-qqd"/>
+                        <outlet property="passwordTextField" destination="BKE-kF-13L" id="fb2-cU-Hgp"/>
                         <outlet property="submitButton" destination="btz-q5-xmG" id="Onw-TZ-Jb9"/>
                         <outlet property="usernameImageView" destination="lEM-6m-stU" id="RKr-1L-OwU"/>
+                        <outlet property="usernameTextField" destination="a5M-uE-pj6" id="zZs-GE-Ddl"/>
                         <segue destination="ryY-7r-r7h" kind="push" identifier="HomeSegue" id="dcH-YY-3er"/>
                     </connections>
                 </viewController>
