@@ -6,7 +6,7 @@
 //  Copyright © 2016 Cubes School 3. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LoginViewController.h"
 
-@interface SignUpViewController : UIViewController <UITextFieldDelegate>
+@interface SignUpViewController : LoginViewController
 @end

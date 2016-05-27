@@ -30,6 +30,7 @@ static NSString *const USER_IMAGE              = @"USER_IMAGE";
 static NSString *const WALKTHROUGH_PRESENTED   = @"WALKTHROUGH_PRESENTED";
 static NSString *const LOGED_IN                = @"LOGED_IN";
 
+
 #endif /* Constants_h */
 
 // Strings & numbers
@@ -39,6 +40,10 @@ static NSString *const LOGED_IN                = @"LOGED_IN";
 static NSString *const CITY_CHANGED             = @"CITY_CHANGED";
 static NSString *const OK_STRING                = @"OK";
 static NSString *const EMPTY_STRING             = @"";
+static NSString *const SHOW_HOME                = @"SHOW_HOME";
+static NSString *const SHOW_LOGIN               = @"SHOW_LOGIN";
+
+
 
 // URLs
 static NSString *const CUBES_URL               =@"http://www.cubes.rs";
