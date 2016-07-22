@@ -50,15 +50,6 @@
     return self;
 }
 
-#pragma mark - Public API
-
-- (void)setText:(NSString *)text {
-    self.placeholderLabelVerticalConstraint.constant = 30.0f;
-    self.placeholderLabel.alpha = 1.0f;
-    [self layoutIfNeeded];
-    self.textField.text = text;
-}
-
 #pragma mark - Private API
 
 - (void)open {

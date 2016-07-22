@@ -7,11 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "AnimatedTextFieldView.h"
-
-@interface ViewController()
-@property (weak, nonatomic) IBOutlet AnimatedTextFieldView *textFieldView;
-@end
 
 @implementation ViewController
 @end

@@ -14,5 +14,4 @@ IB_DESIGNABLE
 @property (strong, nonatomic) IBInspectable UIColor *activeColor;
 @property (strong, nonatomic) IBInspectable UIColor *activeBackgroundColor;
 @property (copy, nonatomic) IBInspectable NSString *placeholderString;
-- (void)setText:(NSString *)text;
 @end

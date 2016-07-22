@@ -36,17 +36,38 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTc-Pc-4I7" customClass="MadokaTextFieldView">
+                                <rect key="frame" x="20" y="140" width="560" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="SCI-q3-qxa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.0" green="0.32156862749999998" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maskColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="closeDuration">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="openDuration">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pBb-uS-gnh" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="E8K-lw-8YC"/>
+                            <constraint firstAttribute="trailing" secondItem="MTc-Pc-4I7" secondAttribute="trailing" constant="20" id="S6y-W5-w2L"/>
+                            <constraint firstItem="MTc-Pc-4I7" firstAttribute="top" secondItem="pBb-uS-gnh" secondAttribute="bottom" constant="30" id="Thi-gv-Ru5"/>
+                            <constraint firstItem="MTc-Pc-4I7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="U6H-wZ-AEV"/>
                             <constraint firstItem="pBb-uS-gnh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="hMs-8L-8rO"/>
                             <constraint firstAttribute="trailing" secondItem="pBb-uS-gnh" secondAttribute="trailing" constant="20" id="zGM-HX-4mc"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="textFieldView" destination="pBb-uS-gnh" id="p1g-jh-KFd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

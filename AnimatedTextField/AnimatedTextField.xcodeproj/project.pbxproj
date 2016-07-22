@@ -15,6 +15,8 @@
 		1A8598571B7B43AE0008C179 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8598551B7B43AE0008C179 /* LaunchScreen.xib */; };
 		1A8598711B7B480E0008C179 /* AnimatedTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8598701B7B480E0008C179 /* AnimatedTextFieldView.m */; };
 		1A8598731B7B49000008C179 /* AnimatedTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8598721B7B49000008C179 /* AnimatedTextFieldView.xib */; };
+		C40D608C1D423D7C000BA8A9 /* MadokaTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D608B1D423D7C000BA8A9 /* MadokaTextFieldView.m */; };
+		C40D608E1D423EB4000BA8A9 /* MadokaTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C40D608D1D423EB4000BA8A9 /* MadokaTextFieldView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		1A85986F1B7B480E0008C179 /* AnimatedTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTextFieldView.h; sourceTree = "<group>"; };
 		1A8598701B7B480E0008C179 /* AnimatedTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTextFieldView.m; sourceTree = "<group>"; };
 		1A8598721B7B49000008C179 /* AnimatedTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimatedTextFieldView.xib; sourceTree = "<group>"; };
+		C40D608A1D423D7C000BA8A9 /* MadokaTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MadokaTextFieldView.h; sourceTree = "<group>"; };
+		C40D608B1D423D7C000BA8A9 /* MadokaTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MadokaTextFieldView.m; sourceTree = "<group>"; };
+		C40D608D1D423EB4000BA8A9 /* MadokaTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MadokaTextFieldView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +75,9 @@
 				1A85986F1B7B480E0008C179 /* AnimatedTextFieldView.h */,
 				1A8598701B7B480E0008C179 /* AnimatedTextFieldView.m */,
 				1A8598721B7B49000008C179 /* AnimatedTextFieldView.xib */,
+				C40D608A1D423D7C000BA8A9 /* MadokaTextFieldView.h */,
+				C40D608B1D423D7C000BA8A9 /* MadokaTextFieldView.m */,
+				C40D608D1D423EB4000BA8A9 /* MadokaTextFieldView.xib */,
 				1A8598501B7B43AE0008C179 /* Main.storyboard */,
 				1A8598461B7B43AE0008C179 /* Supporting Files */,
 			);
@@ -148,6 +156,7 @@
 				1A8598731B7B49000008C179 /* AnimatedTextFieldView.xib in Resources */,
 				1A8598571B7B43AE0008C179 /* LaunchScreen.xib in Resources */,
 				1A8598541B7B43AE0008C179 /* Images.xcassets in Resources */,
+				C40D608E1D423EB4000BA8A9 /* MadokaTextFieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +171,7 @@
 				1A8598711B7B480E0008C179 /* AnimatedTextFieldView.m in Sources */,
 				1A85984C1B7B43AE0008C179 /* AppDelegate.m in Sources */,
 				1A8598491B7B43AE0008C179 /* main.m in Sources */,
+				C40D608C1D423D7C000BA8A9 /* MadokaTextFieldView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
