@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C475CFEB1D51E47200D40AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475CFEA1D51E47200D40AB0 /* AppDelegate.swift */; };
+		C475CFED1D51E47200D40AB0 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475CFEC1D51E47200D40AB0 /* ArticlesViewController.swift */; };
+		C475CFF01D51E47200D40AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C475CFEE1D51E47200D40AB0 /* Main.storyboard */; };
+		C475CFF21D51E47200D40AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C475CFF11D51E47200D40AB0 /* Assets.xcassets */; };
+		C475CFF51D51E47200D40AB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C475CFF31D51E47200D40AB0 /* LaunchScreen.storyboard */; };
+		C475CFFD1D51E4CD00D40AB0 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475CFFC1D51E4CD00D40AB0 /* Article.swift */; };
+		C475CFFF1D51E66D00D40AB0 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475CFFE1D51E66D00D40AB0 /* ArticleTableViewCell.swift */; };
+		C475D0011D51E69A00D40AB0 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475D0001D51E69A00D40AB0 /* AsyncImageView.swift */; };
+		C475D0031D51E94000D40AB0 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475D0021D51E94000D40AB0 /* ArticleDetailsViewController.swift */; };
+		C475D0051D51E9D500D40AB0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475D0041D51E9D500D40AB0 /* WebViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C475CFE71D51E47200D40AB0 /* VestiS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VestiS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C475CFEA1D51E47200D40AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C475CFEC1D51E47200D40AB0 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		C475CFEF1D51E47200D40AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C475CFF11D51E47200D40AB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C475CFF41D51E47200D40AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C475CFF61D51E47200D40AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C475CFFC1D51E4CD00D40AB0 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		C475CFFE1D51E66D00D40AB0 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		C475D0001D51E69A00D40AB0 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		C475D0021D51E94000D40AB0 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
+		C475D0041D51E9D500D40AB0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C475CFE41D51E47200D40AB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C475CFDE1D51E47200D40AB0 = {
+			isa = PBXGroup;
+			children = (
+				C475CFE91D51E47200D40AB0 /* VestiS */,
+				C475CFE81D51E47200D40AB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C475CFE81D51E47200D40AB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C475CFE71D51E47200D40AB0 /* VestiS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C475CFE91D51E47200D40AB0 /* VestiS */ = {
+			isa = PBXGroup;
+			children = (
+				C475CFEA1D51E47200D40AB0 /* AppDelegate.swift */,
+				C475CFEC1D51E47200D40AB0 /* ArticlesViewController.swift */,
+				C475D0021D51E94000D40AB0 /* ArticleDetailsViewController.swift */,
+				C475D0041D51E9D500D40AB0 /* WebViewController.swift */,
+				C475CFFC1D51E4CD00D40AB0 /* Article.swift */,
+				C475CFFE1D51E66D00D40AB0 /* ArticleTableViewCell.swift */,
+				C475D0001D51E69A00D40AB0 /* AsyncImageView.swift */,
+				C475CFEE1D51E47200D40AB0 /* Main.storyboard */,
+				C475CFF11D51E47200D40AB0 /* Assets.xcassets */,
+				C475CFF31D51E47200D40AB0 /* LaunchScreen.storyboard */,
+				C475CFF61D51E47200D40AB0 /* Info.plist */,
+			);
+			path = VestiS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C475CFE61D51E47200D40AB0 /* VestiS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C475CFF91D51E47200D40AB0 /* Build configuration list for PBXNativeTarget "VestiS" */;
+			buildPhases = (
+				C475CFE31D51E47200D40AB0 /* Sources */,
+				C475CFE41D51E47200D40AB0 /* Frameworks */,
+				C475CFE51D51E47200D40AB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VestiS;
+			productName = VestiS;
+			productReference = C475CFE71D51E47200D40AB0 /* VestiS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C475CFDF1D51E47200D40AB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Djuro Alfirevic";
+				TargetAttributes = {
+					C475CFE61D51E47200D40AB0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C475CFE21D51E47200D40AB0 /* Build configuration list for PBXProject "VestiS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C475CFDE1D51E47200D40AB0;
+			productRefGroup = C475CFE81D51E47200D40AB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C475CFE61D51E47200D40AB0 /* VestiS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C475CFE51D51E47200D40AB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C475CFF51D51E47200D40AB0 /* LaunchScreen.storyboard in Resources */,
+				C475CFF21D51E47200D40AB0 /* Assets.xcassets in Resources */,
+				C475CFF01D51E47200D40AB0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C475CFE31D51E47200D40AB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C475CFFF1D51E66D00D40AB0 /* ArticleTableViewCell.swift in Sources */,
+				C475CFED1D51E47200D40AB0 /* ArticlesViewController.swift in Sources */,
+				C475D0031D51E94000D40AB0 /* ArticleDetailsViewController.swift in Sources */,
+				C475CFEB1D51E47200D40AB0 /* AppDelegate.swift in Sources */,
+				C475D0051D51E9D500D40AB0 /* WebViewController.swift in Sources */,
+				C475D0011D51E69A00D40AB0 /* AsyncImageView.swift in Sources */,
+				C475CFFD1D51E4CD00D40AB0 /* Article.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C475CFEE1D51E47200D40AB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C475CFEF1D51E47200D40AB0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C475CFF31D51E47200D40AB0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C475CFF41D51E47200D40AB0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C475CFF71D51E47200D40AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C475CFF81D51E47200D40AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C475CFFA1D51E47200D40AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VestiS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rs.cubes.VestiS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C475CFFB1D51E47200D40AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VestiS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rs.cubes.VestiS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C475CFE21D51E47200D40AB0 /* Build configuration list for PBXProject "VestiS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C475CFF71D51E47200D40AB0 /* Debug */,
+				C475CFF81D51E47200D40AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C475CFF91D51E47200D40AB0 /* Build configuration list for PBXNativeTarget "VestiS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C475CFFA1D51E47200D40AB0 /* Debug */,
+				C475CFFB1D51E47200D40AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C475CFDF1D51E47200D40AB0 /* Project object */;
+}
